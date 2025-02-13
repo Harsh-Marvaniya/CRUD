@@ -15,7 +15,7 @@ export default function UserList({ setEditingUser }) {
 
     const handleDelete = async (id) => {
         await deleteUser(id);
-        fetchUsers();  // Refresh the list after deleting a user
+        fetchUsers(); 
     };
 
     return (
@@ -24,7 +24,7 @@ export default function UserList({ setEditingUser }) {
             <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-gray-300 shadow-md">
                     <thead>
-                        <tr className="bg-blue-500 text-white">
+                        <tr className="bg-red-500 text-white">
                             <th className="p-3 text-left">Name</th>
                             <th className="p-3 text-left">Email</th>
                             <th className="p-3 text-left">Phone</th>

@@ -17,7 +17,7 @@ export default function UserForm({ editingUser, setEditingUser, fetchUsers }) {
         }
         setUser({ name: "", email: "", phone: "" });
         setEditingUser(null);
-        fetchUsers();  // Refresh the user list after adding/updating
+        fetchUsers();  
     };
 
     return (
@@ -49,7 +49,7 @@ export default function UserForm({ editingUser, setEditingUser, fetchUsers }) {
                     className="w-full p-2 border border-gray-300 rounded-md"
                 />
                 <div className="flex gap-2">
-                    <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+                    <button type="submit" className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">
                         {editingUser ? "Update" : "Add"} User
                     </button>
                     {editingUser && (
@@ -59,7 +59,7 @@ export default function UserForm({ editingUser, setEditingUser, fetchUsers }) {
                                 setEditingUser(null);
                                 setUser({ name: "", email: "", phone: "" });
                             }}
-                            className="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600"
+                            className="bg-black-500 text-white px-4 py-2 rounded-md hover:bg-black-600"
                         >
                             Cancel
                         </button>
